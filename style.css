@@ -277,6 +277,7 @@ body {
 /* styles */
 .large { font-size: 2rem; }
 .med { font-size: 1.4rem; }
+.w50 { width: 50%; }
 
 .responsive {
     width: 100%;
@@ -291,6 +292,25 @@ body {
     border: 1px solid red;
 }
 
+.form {
+  background: #eee;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: auto;
+}
+
+#contact-form > * {
+  padding: 2px;
+  margin: 2px;
+}
+
+label {
+  line-height: 20px;
+}
+
+input {
+  padding: 4px;
+}
 
 
 
