@@ -1,6 +1,6 @@
 body {
   background: white;
-  font-family: 'Raleway', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 800;
   font-size: 14px;
   color: #333;
@@ -8,10 +8,65 @@ body {
   margin: 0; padding: 0;
 }
 
+li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  padding: 2px 0px;
+}
+
 .container { 
     height: 100%; 
     display: flex;
     flex-direction: column;
+}
+
+nav {
+  height: 155px;
+  transition: height 0.2s;
+  z-index: 1;
+}
+
+.title {
+  position: relative;
+  font-family: 'Patrick Hand SC', cursive;
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 0; margin: 0;
+  margin-top: -20px;
+}
+
+.header {
+  font-family: 'Raleway', sans-serif;
+  margin: 10px 0px;
+  font-size: 1.4rem;
+}
+
+hr {
+  border: .5px solid #AAA;
+  padding: 0; margin: 0;
+  width: 96%;
+}
+
+.rale {
+  font-family: 'Raleway', sans-serif;
+}
+
+.section {
+  width: 100%;
+  height: auto;
+  flex: 1;
+  flex-shrink: 1;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hero {
+  padding: 20px 0px;
+}
+
+/* sections */
+.resources, .contact, .services {
+    background-color: #eee;
 }
 
 /* flexbox */
@@ -30,6 +85,9 @@ body {
 .feven {
     justify-content: space-evenly;
 }
+.fwide {
+  justify-content: space-between;
+}
 
 .cell {
     flex: 0 1 auto;
@@ -45,23 +103,24 @@ body {
 .fgrow {
     flex-grow: 1;
 }
-
-/* components */
-.nav {
-  padding: 30px;
-  height: 70px;
+.fend {
+  align-self: flex-end;
 }
 
 .logo {
-    position: absolute;
-    left: 10px;
-    top: 10px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    padding: 0; margin: 0;
 }
 
 .dropdown {
   flex: 3;
   text-align: right;
-  width: 140px; }
+  width: 140px; 
+  margin-top: 20px;
+  margin-right: 20px;
+}
 
 .hamburger {
   display: block; }
@@ -74,19 +133,22 @@ body {
   width: 30%;
   min-width: 120px;
   float: right;
-  margin-right: -10px;
-  padding: 10px;
   z-index: 1;
   background-color: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); 
+  line-height: 40px;
+}
   .dropdown-content a {
     color: #222;
     font-size: 1rem;
     display: none;
     transition: all 0.2s ease-out;
     text-decoration: none;
-    padding: .5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  }
+
   .dropdown-content a:first-child {
     color: #4863a0; }
   .dropdown-content a:hover {
@@ -99,29 +161,49 @@ body {
 .dropdown:hover .dropdown-content > a {
   display: block; }
 
+.flip {
+  flex-direction: column;
+  margin: 10px;
+}
+
+@media screen and (min-width: 600px ) {
+  .flip {
+    flex-direction: row;
+  }
+  .title {
+    top: 0;
+    font-size: 3rem;
+    margin-top: 34px;
+  }
+  nav {
+    height: 130px;
+  }
+}
+
 .bios {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
 }
 
 .bio {
-    flex: 1;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #eee;
-    color: black;
-    border-radius: 10px;
-    max-width: 400px;
-    height: auto;
-    margin: 10px;
-    padding: 20px;
+  flex: 1;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #eee;
+  color: black;
+  border-radius: 10px;
+  max-width: 400px;
+  height: auto;
+  margin: 10px;
+  padding: 20px;
 }
 
-/* screen sizes larger than 600px */
-@media screen and (min-width: 853px) {
+/* screen sizes larger than 1020px */
+@media screen and (min-width: 940px) {
+
   .hamburger {
     display: none; 
 }
@@ -129,10 +211,12 @@ body {
     display: block;
     width: 100%;
     box-shadow: none; 
+    line-height: 120px;
 }
   .dropdown-content a {
     display: inline-block;
-    border: none; 
+    border: none;
+    padding: 0; 
 }
   .dropdown:hover .dropdown-content > a {
     display: inline-block;
@@ -148,13 +232,16 @@ body {
 }
 
 .main {
-    z-index: -1;
     position: relative;
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background: #eee;
+    background: url('images/hero_bubbles.jpeg') no-repeat;
+    background-position: 0 0px;
+    background-size: cover;
+    height: auto;
+    min-height: 500px;
   }
 
   .inset {
@@ -162,6 +249,9 @@ body {
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+      text-shadow: 0px 0px 10px black;
   }
 
   h1 {
@@ -171,7 +261,9 @@ body {
   }
 
   h3 {
-      font-size: 2rem;
+      font-family: 'Patrick Hand SC', cursive;
+      font-size: 3rem;
+      margin: 0; padding: 0;
   }
 
 .btn {
@@ -190,11 +282,6 @@ body {
     background: white;
 }
 
-.about {
-    width: 100%;
-    height: auto;
-}
-
 .caption {
     font-weight: 800;
     font-size: 0.8rem;
@@ -206,6 +293,7 @@ body {
   background: black;
   height: 80px;
   line-height: 80px;
+  text-align: center;
 }
 
 .social > a {
@@ -233,24 +321,12 @@ body {
 .para {
     padding: 10px;
 }
-.title {
-    color: orangered;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-}
+
 .body {
     font-family: sans-serif;
     font-weight: 100;
     color: black;
-}
-
-.resources .title {
-    color: black;
-}
-
-/* sections */
-.resources, .contact, .services {
-    background-color: #eee;
+    width: 95%;
 }
 
 /* positioning */
@@ -288,7 +364,7 @@ body {
     font-weight: 200;
 }
 
-.outlined {
+.outline {
     border: 1px solid red;
 }
 

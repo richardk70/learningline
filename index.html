@@ -9,74 +9,88 @@
     <title>Learning Line</title>
     <script src="https://use.fontawesome.com/cc18bb2332.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel='stylesheet' href='style.css' type='text/css'>
+    <link rel='icon' sizes='192x192' href='images/logo4.jpg'>
 </head>
 <body>
     <div class='container'>
-        <div class='nav cell fshrink'>
-            <span class='dropdown'>
-                <span class='logo'><img src='images/ll_logo.jpg' height='100'></span>
+
+        <nav class='row fwide'>
+            <div class='cell row flip'>
+                <div class='cell fgrow logo'><a href='#'><img src='images/logo4.jpg' height='140'></a></div>
+                <div class='cell fgrow title'>LearningLine.org</div>
+            </div>
+            <span class='cell dropdown'>
                 <span class='hamburger'><i class='fa fa-bars fa-3x'></i></span>
                     <span class='dropdown-content'>
-                            <a href="#home">HOME</a>
-                            <a href="#about">ABOUT</a>
-                            <a href="#services">SERVICES</a>
-                            <a href="#location">LOCATION</a>
-                            <a href="#contact">CONTACT</a>
-                            <a href="#policies">POLICIES</a>
-                            <a href="#resources">RESOURCES</a>
+                        <!-- <span class="menu"  id="menu-about">ABOUT
+                            <div class="menu-box" id="about">
+                                <div class="col">
+                                    <div>Us</div>
+                                    <div>Our Students</div>
+                                </div>
+                            </div> 
+                        </span> -->
+                        <a href="#about">ABOUT</a>
+                        <a href="#services">SERVICES</a>
+                        <a href="#location">LOCATION</a>
+                        <a href="#contact">CONTACT</a>
+                        <a href="#policies">POLICIES</a>
                     </span>
             </span>
-        </div>
+        </nav>
         
-        <div class='main cell fshrink fcenter'>
-            <img class='responsive' src='images/hero_bubbles.jpeg'>
-            <div class='inset'>
-                <h1>Connect • Communicate • Grow</h1>
-                <div class='centered'><button class='btn'>LEARN MORE</button></div>
+        <div class='section hero'>
+            <div class='main'>
+                <div class='inset'>
+                    <h1>Specializing in reaching children<br>challenged with dyslexia.</h1>
+                    <div class='centered'><button class='btn'>LEARN MORE</button></div>
+                </div>
             </div>
-            <p class='center med m10'>Learning Line<br>
-            Specializing in reaching children challenged with dyslexia.</p>
         </div>
 
-        <div class='about cell fshrink p20'>
+        <div class='section about-us'>
             <h3>About</h3>
-            <div class='para'>
-                <div class='title'>What We Do</div>
-                <p class='body'>You come to our tutoring facility three times a week and we work intensively
-                    with your child to overcome his or her learning disability.
-                </p>
-            </div>
+            <hr>
+            <div class='header'>Us</div>
             <div class='bios'>
-                <div class='bio'>
-                    <div class='centered'><img src='images/robin.jpg' height="240"></div>
-                    <div class='caption'>Robin</div>
-                    <p class='reg'>Robin went to school at UOP.</p>
-                    <p class='reg'>Earned her teaching credential at San Francisco State University.</p>
-                    <div class='row'>
-                        <p class='cell fgrow reg'>Is Orton-Gillingham trained.</p>
-                        <div class='cell'><img src='images/imse_logo.png' width="140"></div>
-                    </div>
+                <div class='bio row col fwide'>
+                    <div class='cell centered'><img src='images/robin.jpg' height="240"></div>
+                    <div class='cell caption'>Robin</div>
+                    <p class='cell reg'>Robin went to school at UOP.</p>
+                    <p class='cell reg'>Earned her teaching credential at San Francisco State University.</p>
+                    <p class='cell fgrow reg'>Is Orton-Gillingham trained.</p>
+                    <div class='cell fend'><img src='images/imse_logo.png' width="140"></div>
                 </div>
 
-                <div class='bio'>
-                    <div class='centered'><img src='images/jenny.jpg' height="240"></div>
-                    <div class='caption'>Jenny</div>
-                    <p class='reg'>Jenny went to school at... uh, not sure.</p>
-                    <div class='row'>
-                        <p class='cell fgrow reg'>Is Orton-Gillingham trained.</p>
-                        <div class='cell'><img src='images/imse_logo.png' width="140"></div>
-                    </div>
+                <div class='bio row col fwide'>
+                    <div class='cell centered'><img src='images/jenny.jpg' height="240"></div>
+                    <div class='cell caption'>Jenny</div>
+                    <p class='cell reg'>Jenny went to school at... uh, not sure.</p>
+                    <p class='cell fgrow reg'>Is Orton-Gillingham trained.</p>
+                    <div class='cell fend'><img src='images/imse_logo.png' width="140"></div>
                 </div>
+            </div>
 
+            <div class='about-students'>
+                <div class='header'>Our Students</div>
+                <div class='body'>
+                Our dyslexic students are smart, creative kids who have a hard time proving their 
+                intelligence on paper. They have been let down by their previous school, which has 
+                often misdiagnosed or ignored dyslexia symptoms. Doing the wrong things over and 
+                over again won’t help them. Our dyslexia learning program meets each student where 
+                they are by utilizing small learning groups and diagnostic teaching with targeted, 
+                specialized dyslexia tutoring. The result is real progress that allows them to 
+                transition back to a more typical school setting.</div>
             </div>
         </div>
 
-        <div class='services cell fshrink p20'>
+        <div class='section services'>
             <h3>Services</h3>
+            <hr>
             <div class='para'>
-                <div class='title'>Services Offered</div>
                 <div class='body'>Services include individualized speech and language therapy, 
                     evaluations, and consultations.  Services are provided in office or in the 
                     client's natural learning environment, such as in home, daycare, or school site. 
@@ -84,15 +98,35 @@
             </div>
             <div><img src='images/services.jpeg' class='rel centerX m20-tb responsive'></div>
             <div class='para'>
-                <div class='title'>Consultations</div>
+                <div class='header'>Consultations</div>
                 <div class='body'>Consultations gather general information about a client, including 
                     primary concerns, previous therapy, assessments, and present diagnoses. 
                     Consultations serve as a chance to meet the client, family, and/or related 
                     professionals to discuss the best approaches towards meeting the client's 
-                    communication needs and goals. </div>
+                    communication needs and goals. 
+
+                    When a child underachieves in school, it is crucial to identify the underlying 
+                    cause as soon as possible. As a rule, the older a child is, the harder it is to 
+                    address a learning difference. We offer consultations to evaluate your child’s 
+                    screening and assessment needs.
+
+                    This initial consultation can provide:
+                <ul>
+                    <li>Preliminary evaluation regarding likelihood of presence of dyslexia or phonemic awareness deficit.</li>
+                    <li>Recommendations regarding further assessments, and if required, referrals to trusted professionals.</li>
+                    <li>Information about appropriate schooling and tutoring options in the Los Angeles area.</li>
+                    <li>How Learning Line can or cannot meet your student’s needs.</li>
+                    <li>Correct steps to take to get your child on a successful learning path.</li>
+                    <li>General information about Dyslexia.</li>
+                    <li>Information on advocating for, and receiving testing and accommodation at public schools.</li>
+                </ul>
+                    
+                    Interested in a consultation? Complete the <a href='#'>Contact Form</a> and 
+                    we'll get in touch!                
+                </div>
             </div>
             <div class='para'>
-                <div class='title'>Evaluations</div>
+                <div class='header'>Evaluations</div>
                 <div class='body'>The evaluation assesses all areas of communication, including 
                     receptive and expressive language, articulation, phonology, oral motor, voice 
                     and fluency, and social pragmatic skills. The evaluation includes formal 
@@ -100,32 +134,43 @@
                     Treatment plan and recommendations are provided based on outcome. </div>
             </div>
             <div class='para'>
-                <div class='title'>Therapy</div>
-                <div class='body'>Speech and language treatment programs are developed based on goals 
-                    and current individual needs. Bernadette utilizes a variety of techniques and 
-                    encourages team collaboration with parents, caregivers, and other related 
-                    professionals to maximize communication success. Therapy services are available 
-                    for the following areas of concern:</div>
-                    <ul>
-                        <li>Early Language Delays ("Late Talkers")</li>
-                        <li>Expressive and Receptive Language Disorders</li>
-                        <li>Articulation/Phonological Disorders</li>
-                        <li>Autism Spectrum Disorders/Social Pragmatic Skills</li>
-                        <li>Cognitive Language</li>
-                        <li>Auditory Processing</li>
-                        <li>Verbal Apraxia and Oral-Motor Disorders</li>
-                        <li>Fluency Disorders/Stuttering</li>
-                        <li>Feeding and Orofacial Myology Disorders (Tongue Thrust)</li>
-                        <li>Literacy and Phonemic Awareness</li>
-                        <li>Reading Comprehension</li>
-                    </ul>
+                <div class='header'>Tutoring</div>
+                <div class='body'>We offer after school tutoring. These sessions are appropriate for 
+                    students having common learning differences: 
+                    a deficit in Phonemic Awareness and/or Dyslexia. 
+                    These learning differences commonly occur together. All can be corrected with 
+                    regular tutoring using research-based, simultaneous, multi-sensory methods. 
+                    We feature the Milan Method and the Barton Reading and Spelling System.
+                    <p>
+                    What is dyslexia?</p>
+                    Dyslexia is a learning difference characterized by difficulty learning to read and spell. 
+                    It is not indicative of intellectual deficits.
+                    <p>
+                    What is phonemic awareness?</p>
+                    Phonemic Awareness is the ability to hear, identify, and manipulate individual sounds in 
+                    spoken words. Dyslexic students who lack phonemic awareness cannot learn how to read and spell.</p>
+                    <p>
+                    I’ve Tried Tutoring, But It Didn’t Work</p>
+                    <p>
+                    These learning differences require specialized, highly-targeted techniques. 
+                    Most tutoring centers do not have the trained staff to successfully remediate these learning 
+                    differences and, in fact, can often do more harm than good as a result.</p>
+                    <p>
+                    How Do I Know If My Child Has These Learning Differences?</p>
+                    <p>
+                    Dyslexia, a lack of phonemic awareness, can be accurately identified as early as 
+                    kindergarten. Before a student is accepted into the tutoring program, they must have 
+                    specific academic testing by a trained professional. 
+                    See <a href='#'>Screenings and Consultations</a> for more information.</p>
             </div>
         </div>
+        </div>
 
-        <div class='location cell fshrink p20'>
+        <div class='section location'>
             <h3>Location</h3>
+            <hr>
             <div class='para'>
-                <div class='title'>Come on in for a free evaluation</div>
+                <div class='header'>Come on in for a free evaluation</div>
                 <div class='body'>Our office is located just off the freeway in Claremont, CA. 
                     <p>While we can travel to your home or your child's school, our services 
                         are better rendered at our office.</p>
@@ -134,7 +179,7 @@
             </div>
             <div class='para row'> 
                 <div class='cell'>
-                    <div class='title'>Areas Served</div>
+                    <div class='header'>Areas Served</div>
                     <div class='body'>
                         <ul>
                             <li>Claremont</li>
@@ -143,6 +188,10 @@
                             <li>Ontario</li>
                             <li>Rancho Cucamonga</li>
                             <li>Pomona</li>
+                            <li>La Verne</li>
+                            <li>San Dimas</li>
+                            <li>Glendora</li>
+                            <li>Azusa</li>
                         </ul>
                     </div>
                 </div>
@@ -155,14 +204,15 @@
 
         <!-- CONTACT -->
 <div id='Acontact'></div>
-<div class='contact cell fshrink p20'>
+<div class='section contact'>
     <h3>Contact</h3>
+    <hr>
     <div class='row'>
-        <div class='cell'>
+        <div class='cell rale'>
             <p>You want your child to succeed.</p><p>So do we.</p>
             <p>Reach out and let us help.</p>
 
-            <form id='contact-form' method='post' action='contact.php'>
+            <form id='contact-form' method='post' action='contact.php' class='reg'>
                 <div class='row'>
                     <span class='cell1'><label for='form-first'>First name:</label></span>
                     <span class='cell1'><input type='text' id='form-first' name='first' placeholder="first name" required /></span>
@@ -193,10 +243,11 @@
     </div> 
 </div>
 
-<div class='policies cell fshrink p20'>
+<div class='section policies'>
     <h3>Policies</h3>
+    <hr>
     <div class='para'>
-        <div class='title'>Insurance</div>
+        <div class='header'>Insurance</div>
         <div class='body'>Learning Line.org is considered an out-of-network provider. All services are 
             self-pay. We do not file with any insurance companies. However, we will gladly provide a 
             monthly invoice that can be submitted to your insurance company for an out-of-network 
@@ -209,7 +260,7 @@
         </div>
     </div>
     <div class='para'>
-        <div class='title'>Fees</div>
+        <div class='header'>Fees</div>
         <p class='body'>Please contact our office directly for more information regarding individual 
             fees. The fee for therapy is based on an hourly rate and includes time spent in direct 
             therapy with the child and consultation with the family. An individual therapy session 
@@ -218,7 +269,7 @@
         </p>
     </div>
     <div class='para'>
-        <div class='title'>Cancellations</div>
+        <div class='header'>Cancellations</div>
         <div class='body'>A 24-hour notice is required in the event of a cancellation. Missed 
             appointments without a 24-hour notice are subject to a cancellation fee. We understand 
             that unforeseen circumstances and sicknesses do happen. In the event of a sickness, 
@@ -230,41 +281,7 @@
     </div>
 </div>
 
-<div class='resources cell fshrink p20'>
-    <h3>Resources</h3>
-    <div class='para title'>Helpful Links for Your Benefit</div>
-    <div class='para'>
-        <div class='title'>ASHA - American Speech-Language and Hearing Association</div>
-        <div class='title'><a href='http://www.asha.org'>http://www.asha.org</a></div>
-        <p class='body'>ASHA is a professional association for speech language pathologists, 
-            audiologists, and speech, language, and hearing specialists in the United States and 
-            internationally.</p>
-    </div>
-    <div class='para'>
-        <div class='title'>ASHA - American Speech-Language and Hearing Association</div>
-        <div class='title'><a href='http://www.asha.org'>http://www.asha.org</a></div>
-        <p class='body'>ASHA is a professional association for speech language pathologists, 
-            audiologists, and speech, language, and hearing specialists in the United States and 
-            internationally.</p>
-    </div>
-    <div class='para'>
-        <div class='title'>ASHA - American Speech-Language and Hearing Association</div>
-        <div class='title'><a href='http://www.asha.org'>http://www.asha.org</a></div>
-        <p class='body'>ASHA is a professional association for speech language pathologists, 
-            audiologists, and speech, language, and hearing specialists in the United States and 
-            internationally.</p>
-    </div>
-    <div class='para'>
-        <div class='title'>ASHA - American Speech-Language and Hearing Association</div>
-        <div class='title'><a href='http://www.asha.org'>http://www.asha.org</a></div>
-        <p class='body'>ASHA is a professional association for speech language pathologists, 
-            audiologists, and speech, language, and hearing specialists in the United States and 
-            internationally.</p>
-    </div>
-</div>
-
-
-<div class='footer cell fshrink centered'>©2020 All rights reserved, Learning Line</div>
+<div class='section footer'>©2020 All rights reserved, Learning Line.org</div>
 </div>
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script src='contact.js' type='text/javascript'></script>
