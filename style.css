@@ -2,10 +2,12 @@ body {
   background: white;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 20px;
   color: #333;
   overflow-x: hidden; 
   margin: 0; padding: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 li {
@@ -20,25 +22,39 @@ li {
     flex-direction: column;
 }
 
-nav {
-  height: 155px;
-  transition: height 0.2s;
-  z-index: 1;
-}
-
 .title {
-  position: relative;
   font-family: 'Patrick Hand SC', cursive;
   font-weight: 600;
-  font-size: 2rem;
-  padding: 0; margin: 0;
-  margin-top: -20px;
+  font-size: 2.75rem;
+  transition: all 0.2s;
+  align-self: center;
+}
+
+.front {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+#logo {
+  height: 100px;
+  transition: height 0.2s;
+}
+
+@media screen and ( min-width: 650px ) {
+  .title {
+    top: 20px;
+    font-size: 4rem;
+  }
+  #logo {
+    height: 140px;
+  }
 }
 
 .header {
   font-family: 'Raleway', sans-serif;
   margin: 10px 0px;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
 hr {
@@ -52,16 +68,18 @@ hr {
 }
 
 .section {
-  width: 100%;
-  height: auto;
-  flex: 1;
-  flex-shrink: 1;
-  justify-content: center;
-  padding: 20px;
+  position: relative;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 40px;
+
 }
 
 .hero {
-  padding: 20px 0px;
+  padding: 0;
+  margin: 0;
 }
 
 /* sections */
@@ -82,6 +100,7 @@ hr {
 .fcenter {
     justify-content: center;
 }
+
 .feven {
     justify-content: space-evenly;
 }
@@ -103,80 +122,183 @@ hr {
 .fgrow {
     flex-grow: 1;
 }
+.fstart {
+  justify-content: flex-start;
+}
 .fend {
   align-self: flex-end;
 }
 
-.logo {
-    position: relative;
-    left: 0px;
-    top: 0px;
-    padding: 0; margin: 0;
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.4s;
+  background: none;
+  z-index: 3;
+  display: flex;
+  cursor: pointer;
 }
 
-.dropdown {
-  flex: 3;
-  text-align: right;
-  width: 140px; 
-  margin-top: 20px;
-  margin-right: 20px;
+#dropdown{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.hamburger {
-  display: block; }
-
-.hamburger:hover {
-  color: grey; }
-
-.dropdown-content {
-  display: none;
-  width: 30%;
-  min-width: 120px;
-  float: right;
-  z-index: 1;
-  background-color: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); 
-  line-height: 40px;
+#hamburger{
+  padding: 10px;
+  color: #333;
+  transition: transform 0.3s;
 }
-  .dropdown-content a {
-    color: #222;
-    font-size: 1rem;
-    display: none;
-    transition: all 0.2s ease-out;
-    text-decoration: none;
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
-  }
 
-  .dropdown-content a:first-child {
-    color: #4863a0; }
-  .dropdown-content a:hover {
-    color: #4863a0;
-    background-color: #eee; }
+#hamburger:hover{
+  color: black;
+}
 
-.dropdown:hover .dropdown-content {
-  display: block; }
-
-.dropdown:hover .dropdown-content > a {
-  display: block; }
-
-.flip {
+.drop-content{
+  position: absolute;
+  display: flex;
   flex-direction: column;
-  margin: 10px;
+  width: 140px;
+  top: 80px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px rgb(0,0,0,0.4);
 }
 
-@media screen and (min-width: 600px ) {
-  .flip {
-    flex-direction: row;
+.drop-content>a{
+  flex: 0 1 auto;
+  background-color: #eee;
+  transition: background-color 0.2s;
+  color: #333;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-bottom: 1px solid #aaa;
+  display: none;
+  height: 30px;
+  padding: 10px;
+}
+
+.drop-content>a:first-child{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.drop-content>a:last-child{
+  border-bottom: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.drop-content>a:hover{
+  background: white;
+  color: black;
+}
+
+#dropdown:hover .drop-content{
+  opacity: 1.0;
+}
+
+#dropdown:hover .drop-content>a{
+  display: block;
+}
+
+/* for devices 725 and wider */
+@media screen and (min-width: 725px){
+  #hamburger{
+      display: none;
   }
-  .title {
-    top: 0;
-    font-size: 3rem;
-    margin-top: 34px;
+  .drop-content{
+      box-shadow: none;
+      background: none;
+      opacity: 1.0;
+      top: 135px;
+      height: 50px;
+      width: 100%;
+      flex-direction: row;
+      justify-content: flex-start;
+      background-color: white;
+      text-align: right;
+      border-radius: 0px;
+    }
+    
+    .drop-content a{
+      flex: 1;
+      display: block;
+      color: black;
+      text-decoration: none;
+      border: none;
+      background: white;
+      transition: all 0.4s;
+      height: 50px;
+      padding: 0 20px;
+      line-height: 50px;
   }
-  nav {
-    height: 130px;
+  .drop-content a:hover{
+      color: navy;
+      background: none;
+
+  }
+  .drop-content a:first-child{
+      border-radius: 0;
+  }
+  .drop-content a:last-child{
+      border-radius: 0;
+  }
+} 
+
+/* SPLASH /////////////////////*/
+#splash{
+  background: url(images/hero_bubbles.jpeg) no-repeat;
+  background-position: 0 0px;
+  background-size: cover;
+  height: auto;
+  min-height: 500px;
+}
+
+
+.inset {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  text-shadow: 0px 0px 10px black;
+}
+
+h1{
+  position: relative;
+  text-shadow: 0px 0px 10px rgb(0,0,0);
+}
+
+.inset a {
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.btn {
+  padding: 20px;
+  color: white;
+  background: none;
+  border: 2px solid white;
+  height: 60px;
+  width: 200px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn:hover{
+  color: black;
+  background: white;
+}
+
+@media screen and ( min-width: 650px ) {
+  .h1 {
+    top: 20px;
+    line-height: 2rem;
   }
 }
 
@@ -201,27 +323,8 @@ hr {
   padding: 20px;
 }
 
-/* screen sizes larger than 1020px */
-@media screen and (min-width: 940px) {
-
-  .hamburger {
-    display: none; 
-}
-  .dropdown-content {
-    display: block;
-    width: 100%;
-    box-shadow: none; 
-    line-height: 120px;
-}
-  .dropdown-content a {
-    display: inline-block;
-    border: none;
-    padding: 0; 
-}
-  .dropdown:hover .dropdown-content > a {
-    display: inline-block;
-    background-color: white; 
-    } 
+/* screen sizes larger than 940px */
+@media screen and (min-width: 800px) {
     .bios {
         flex-direction: row;
     }
@@ -231,29 +334,6 @@ hr {
     }
 }
 
-.main {
-    position: relative;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    background: url('images/hero_bubbles.jpeg') no-repeat;
-    background-position: 0 0px;
-    background-size: cover;
-    height: auto;
-    min-height: 500px;
-  }
-
-  .inset {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      text-align: center;
-      text-shadow: 0px 0px 10px black;
-  }
-
   h1 {
       color: white;
       font-weight: 800;
@@ -262,25 +342,9 @@ hr {
 
   h3 {
       font-family: 'Patrick Hand SC', cursive;
-      font-size: 3rem;
+      font-size: 3.6rem;
       margin: 0; padding: 0;
   }
-
-.btn {
-    padding: 20px;
-    color: white;
-    background: none;
-    border: 2px solid white;
-    height: 60px;
-    width: 200px;
-    border-radius: 30px;
-    font-size: .8rem;
-    font-weight: 600;
-}
-.btn:hover{
-    color: black;
-    background: white;
-}
 
 .caption {
     font-weight: 800;
@@ -360,7 +424,7 @@ hr {
     height: auto;
 }
 .reg {
-    font-size: 1.0rem;
+    font-size: 1.4rem;
     font-weight: 200;
 }
 
@@ -386,6 +450,14 @@ label {
 
 input {
   padding: 4px;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 
