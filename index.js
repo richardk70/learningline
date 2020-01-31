@@ -1,12 +1,26 @@
 const dropCont = document.getElementsByClassName('drop-content')[0];
 const nav = document.getElementsByTagName('nav')[0];
+const front = document.getElementsByClassName('front')[0];
 
 window.addEventListener('scroll', (e) => {
-    if (document.documentElement.scrollTop < 10) {
+    let scrollUp = this.oldScroll > this.scrollY;
+    this.oldScroll = this.scrollY;
+    if (scrollUp){
+        console.log('scrooling up');
+      front.style.top = 100 + 'px';
+    }
+    if (!scrollUp){ // while scrolling down
+      front.style.top = -10 + 'px';
+      nav.style.opacity = 1.0;
+      //document.getElementById('best').style.top = -50 + 'px';
+    }
+    if (document.documentElement.scrollTop < 20) {
         nav.style.top = 0 + 'px';
     } else {
-        nav.style.top = -135 + 'px';
+        nav.style.top = -100 + 'px';
     }
+    // if (window.innerWidth < 725)
+    // front.style.top = 0 + 'px';
   });
 
 // NAVIGATION ////////////////////////////////////////////////
@@ -18,6 +32,7 @@ const Acontact = document.getElementById('Acontact');
 const Apolicies = document.getElementById('Apolicies');
 
 dropCont.addEventListener('click', (e) => {
+  console.log(e.target);
   switch (e.target.id){
     case 'nav-home': scrollHome();
     break;

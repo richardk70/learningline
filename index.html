@@ -71,14 +71,19 @@
 
             <div class='about-students'>
                 <div class='header'>Our Students</div>
-                <div class='body'>
-                Our dyslexic students are smart, creative kids who have a hard time proving their 
-                intelligence on paper. They have been let down by their previous school, which has 
-                often misdiagnosed or ignored dyslexia symptoms. Doing the wrong things over and 
-                over again won’t help them. Our dyslexia learning program meets each student where 
-                they are by utilizing small learning groups and diagnostic teaching with targeted, 
-                specialized dyslexia tutoring. The result is real progress that allows them to 
-                transition back to a more typical school setting.</div>
+
+                    <img class='right' src='images/overwhelmed.jpeg' width='300'>
+                    <div class='body'>
+                    Our dyslexic students are smart, creative kids who have a hard time proving their 
+                    intelligence in the classroom. They have been let down by their previous school, which has 
+                    often misdiagnosed or ignored dyslexia symptoms. Doing the wrong things over and 
+                    over again won’t help them. Our dyslexia learning program meets each student where 
+                    they are by utilizing small learning groups and diagnostic teaching with targeted, 
+                    specialized dyslexia tutoring. The result is real progress that allows them to 
+                    transition back to a more typical school setting.
+                    </div>
+
+                    
             </div>
         </div>
 
@@ -130,35 +135,38 @@
                     Treatment plan and recommendations are provided based on outcome. </div>
             </div>
             <div class='para'>
-                <div class='header'>Tutoring</div>
-                <div class='body'>We offer after school tutoring. These sessions are appropriate for 
-                    students having common learning differences: 
-                    a deficit in Phonemic Awareness and/or Dyslexia. 
+                <div class='flip'>
+                    <div class='cell body'>
+                    <div class='header'>Tutoring</div>
+                    We offer after school tutoring. These sessions are appropriate for 
+                    students having either a deficit in Phonemic Awareness and/or Dyslexia. 
                     These learning differences commonly occur together. All can be corrected with 
                     regular tutoring using research-based, simultaneous, multi-sensory methods. 
-                    We feature the Milan Method and the Barton Reading and Spelling System.
+                    We feature the Milan Method and the Barton Reading and Spelling System.                        
                     <p>
-                    What is dyslexia?</p>
-                    Dyslexia is a learning difference characterized by difficulty learning to read and spell. 
-                    It is not indicative of intellectual deficits.
-                    <p>
-                    What is phonemic awareness?</p>
-                    Phonemic Awareness is the ability to hear, identify, and manipulate individual sounds in 
-                    spoken words. Dyslexic students who lack phonemic awareness cannot learn how to read and spell.</p>
-                    <p>
-                    I’ve Tried Tutoring, But It Didn’t Work</p>
-                    <p>
+                    <div class='bold'>I’ve Tried Tutoring, But It Didn’t Work</div>
                     These learning differences require specialized, highly-targeted techniques. 
                     Most tutoring centers do not have the trained staff to successfully remediate these learning 
                     differences and, in fact, can often do more harm than good as a result.</p>
+                    
                     <p>
-                    How Do I Know If My Child Has These Learning Differences?</p>
-                    <p>
-                    Dyslexia, a lack of phonemic awareness, can be accurately identified as early as 
+                    <div class='bold'>How Do I Know If My Child Has These Learning Differences?</div>
+                    Dyslexia and a lack of phonemic awareness can be accurately identified as early as 
                     kindergarten. Before a student is accepted into the tutoring program, they must have 
                     specific academic testing by a trained professional. 
                     See <a href='#'>Screenings and Consultations</a> for more information.</p>
-            </div>
+                    </div>
+                    <div class='cell card row col fwide' style='background: #ccc'>
+                        <div class='cell centered'><img src='images/dyslexia_scrabble.jpeg' width='300'></div>
+                        <div class='cell'>What is Dyslexia?</div>
+                        <div class='cell reg'>Dyslexia is a learning difference characterized by difficulty learning to read and spell. 
+                            It is not indicative of intellectual deficits.</div>
+                        <div>&nbsp;</div>
+                        <div class='cell'>What is Phonemic Awareness?</div>
+                        <div class='cell reg'>Phonemic Awareness is the ability to hear, identify, and manipulate individual sounds in 
+                        spoken words. Dyslexic students who lack phonemic awareness cannot learn how to read and spell.</div>
+                    </div>
+                </div>
         </div>
         </div>
 
@@ -204,12 +212,12 @@
 <div class='section contact'>
     <h3>Contact</h3>
     <hr>
-    <div class='row'>
+    <div class='row fcenter'>
         <div class='cell rale'>
             <p>You want your child to succeed.</p><p>So do we.</p>
             <p>Reach out and let us help.</p>
 
-            <form id='contact-form' method='post' action='contact.php' class='reg'>
+            <div id='contact-form' method='post' action='contact.php' class='reg'>
                 <div class='row'>
                     <span class='cell1'><label for='form-first'>First name:</label></span>
                     <span class='cell1'><input type='text' id='form-first' name='first' placeholder="first name" required /></span>
@@ -226,7 +234,7 @@
                     <span class='cell1'><label for='form-email'>Email address:</label></span>
                     <span class='cell1'><input type='text' id='form-email' name='email' type="email" placeholder="email address" required /></span>
                 </div>
-                <div class='row'>
+                <div class='row fstart'>
                     <span class='cell1'><label for='form-message'>Message:&nbsp;</label></span>
                     <span class='cell1'><textarea id='form-message' name="message" rows='4' cols='22' placeholder="what's going on?" required></textarea></span>
                 </div>                        
@@ -234,7 +242,7 @@
                 <!-- Google reCAPTCHA box -->
                 <div class="g-recaptcha" data-sitekey="6LcjvaQUAAAAAFV3_Zop-pfR7CtqYgEAvhL-i6PB" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
 
-                <input class='btn' type="submit" value="Submit">
+                <div class='centered'><input class='btn btn-green' type="submit" value="Submit"></div>
             </form>
         </div>      
     </div> 
@@ -278,8 +286,10 @@
         </div>
     </div>
 </div>
+</div>
 
-<div class='section footer'>©2020 All rights reserved, Learning Line.org</div>
+<div class='footer'>
+    <span class='cell'>©2020 All rights reserved,</span>&nbsp;<span class='cell'>Learning Line.org</span>
 </div>
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script src='contact.js' type='text/javascript'></script>

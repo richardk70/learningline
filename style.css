@@ -28,12 +28,15 @@ li {
   font-size: 2.75rem;
   transition: all 0.2s;
   align-self: center;
+  position: relative;
+  top: -10px;
 }
 
 .front {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  z-index: 5;
 }
 
 #logo {
@@ -43,7 +46,6 @@ li {
 
 @media screen and ( min-width: 650px ) {
   .title {
-    top: 20px;
     font-size: 4rem;
   }
   #logo {
@@ -74,7 +76,6 @@ hr {
   flex-direction: column;
   justify-content: flex-start;
   padding: 20px 40px;
-
 }
 
 .hero {
@@ -114,6 +115,11 @@ hr {
 
 .cell1 {
     flex: 1;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+.cell2 {
+    flex: 2;
 }
 
 .fshrink {
@@ -214,7 +220,7 @@ nav{
       box-shadow: none;
       background: none;
       opacity: 1.0;
-      top: 135px;
+      top: 95px;
       height: 50px;
       width: 100%;
       flex-direction: row;
@@ -222,6 +228,7 @@ nav{
       background-color: white;
       text-align: right;
       border-radius: 0px;
+
     }
     
     .drop-content a{
@@ -233,7 +240,7 @@ nav{
       background: white;
       transition: all 0.4s;
       height: 50px;
-      padding: 0 20px;
+      padding: 0 10px;
       line-height: 50px;
   }
   .drop-content a:hover{
@@ -295,10 +302,37 @@ h1{
   background: white;
 }
 
+.btn-green {
+  color: #4cc417;
+  border: 2px solid #4cc417;
+}
+.btn-green:hover {
+  background: #4cc417;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 0; padding: 0;
+  color: #ddd; 
+  background: black;
+  min-height: 80px;
+  line-height: 10px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
 @media screen and ( min-width: 650px ) {
   .h1 {
     top: 20px;
     line-height: 2rem;
+  }
+  .footer {
+    flex-direction: row;
+    line-height: 80px;
+    font-size: 1rem;
   }
 }
 
@@ -321,6 +355,36 @@ h1{
   height: auto;
   margin: 10px;
   padding: 20px;
+}
+
+.right {
+  float: left;
+  margin-right: 20px;
+}
+
+.card {
+  flex: 1;
+  background: #ccc;
+  color: black;
+  border-radius: 10px;
+  max-width: 400px;
+  height: auto;
+  max-height: 640px;
+  margin: 10px;
+  padding: 20px;
+}
+
+.flip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (min-width: 700px) {
+  .flip {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 
 /* screen sizes larger than 940px */
@@ -350,14 +414,6 @@ h1{
     font-weight: 800;
     font-size: 0.8rem;
     text-align: center;
-}
-
-.footer {
-  color: #ddd; 
-  background: black;
-  height: 80px;
-  line-height: 80px;
-  text-align: center;
 }
 
 .social > a {
@@ -391,6 +447,11 @@ h1{
     font-weight: 100;
     color: black;
     width: 95%;
+}
+
+.bold { 
+  font-weight: 800; 
+  margin-bottom: 10px;
 }
 
 /* positioning */
@@ -453,11 +514,14 @@ input {
   border-radius: 4px;
   font-size: 1.4rem;
   border: 1px solid #ccc;
+  width: 200px;
 }
 
 textarea {
   font-size: 1.4rem;
   font-family: Arial, Helvetica, sans-serif;
+  border-radius: 4px;
+  width: 240px;
 }
 
 
