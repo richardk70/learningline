@@ -37,6 +37,7 @@ li {
   flex-direction: row;
   align-items: flex-start;
   z-index: 5;
+  pointer-events: none;
 }
 
 #logo {
@@ -75,7 +76,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 20px 40px;
+  padding: 1rem 2rem;
 }
 
 .hero {
@@ -168,7 +169,7 @@ nav{
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 140px;
+  width: 200px;
   top: 80px;
   border-radius: 8px;
   box-shadow: 4px 4px 4px rgb(0,0,0,0.4);
@@ -183,8 +184,7 @@ nav{
   text-decoration: none;
   border-bottom: 1px solid #aaa;
   display: none;
-  height: 30px;
-  padding: 10px;
+  padding: 20px 30px;
 }
 
 .drop-content>a:first-child{
@@ -374,6 +374,11 @@ h1{
   padding: 20px;
 }
 
+#scrabble {
+  width: 100%;
+  height: auto;
+}
+
 .flip {
   display: flex;
   flex-direction: column;
@@ -410,33 +415,16 @@ h1{
       margin: 0; padding: 0;
   }
 
+  .location img {
+    width: 100%;
+    height: auto;
+  }
+
 .caption {
     font-weight: 800;
     font-size: 0.8rem;
     text-align: center;
 }
-
-.social > a {
-  padding: 10px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  width: 40px; }
-
-.tooltiptext {
-  opacity: 0;
-  position: relative;
-  top: -55px;
-  left: -30px;
-  padding: 4px;
-  display: inline-block;
-  background: lightyellow;
-  color: black;
-  border-radius: 3px;
-  text-align: center;
-  font-size: .8rem; }
-
-.social > a:hover .tooltiptext {
-  opacity: 1; }
 
 .para {
     padding: 10px;
