@@ -22,22 +22,22 @@ li {
     flex-direction: column;
 }
 
+.front {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 5;
+  pointer-events: none;
+}
+
 .title {
   font-family: 'Patrick Hand SC', cursive;
   font-weight: 600;
   font-size: 2.75rem;
   transition: all 0.2s;
-  align-self: center;
+  align-self: left;
   position: relative;
   top: -10px;
-}
-
-.front {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  z-index: 5;
-  pointer-events: none;
 }
 
 #logo {
@@ -46,8 +46,12 @@ li {
 }
 
 @media screen and ( min-width: 650px ) {
+  .front {
+    flex-direction: row;
+  }
   .title {
     font-size: 4rem;
+    top: 20px;
   }
   #logo {
     height: 140px;
@@ -259,17 +263,20 @@ nav{
 /* SPLASH /////////////////////*/
 #splash{
   background: url(images/hero_bubbles.jpeg) no-repeat;
-  background-position: 0 0px;
-  background-size: cover;
+  background-position: 50% 40%;
+  background-size: 100%;
   height: auto;
   min-height: 500px;
+  min-width: 300px;
 }
-
 
 .inset {
   position: relative;
-  top: 50%;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20%;
+  margin-bottom: 40px;
+  width: 90%;
   text-align: center;
   text-shadow: 0px 0px 10px black;
 }
@@ -357,13 +364,23 @@ h1{
   padding: 20px;
 }
 
-.right {
+.left{
   float: left;
   margin-right: 20px;
 }
 
+.left{
+  float: right;
+  margin-right: 20px;
+}
+
+.para {
+  position: relative;
+  padding: 10px;
+  overflow-wrap: normal;
+}
+
 .card {
-  flex: 1;
   background: #ccc;
   color: black;
   border-radius: 10px;
@@ -372,6 +389,7 @@ h1{
   max-height: 640px;
   margin: 10px;
   padding: 20px;
+float: none;
 }
 
 #scrabble {
@@ -386,6 +404,9 @@ h1{
 }
 
 @media screen and (min-width: 700px) {
+  .card {
+    float: right;
+  }
   .flip {
     flex-direction: row;
     justify-content: flex-start;
@@ -424,10 +445,6 @@ h1{
     font-weight: 800;
     font-size: 0.8rem;
     text-align: center;
-}
-
-.para {
-    padding: 10px;
 }
 
 .body {
