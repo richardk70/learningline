@@ -28,6 +28,7 @@ li {
   justify-content: flex-start;
   z-index: 5;
   pointer-events: none;
+  padding: 10px;
 }
 
 .title {
@@ -43,19 +44,6 @@ li {
 #logo {
   height: 100px;
   transition: height 0.2s;
-}
-
-@media screen and ( min-width: 650px ) {
-  .front {
-    flex-direction: row;
-  }
-  .title {
-    font-size: 4rem;
-    top: 20px;
-  }
-  #logo {
-    height: 140px;
-  }
 }
 
 .header {
@@ -80,7 +68,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
 }
 
 .hero {
@@ -89,8 +77,12 @@ hr {
 }
 
 /* sections */
-.resources, .contact, .services {
+.resources, .services {
     background-color: #eee;
+}
+
+.contact, .about {
+  background-color: white;
 }
 
 /* flexbox */
@@ -332,6 +324,17 @@ h1{
 }
 
 @media screen and ( min-width: 650px ) {
+  .front {
+    flex-direction: row;
+    padding: 0px;
+  }
+  .title {
+    font-size: 4rem;
+    top: 20px;
+  }
+  #logo {
+    height: 140px;
+  }
   .h1 {
     top: 20px;
     line-height: 2rem;
@@ -360,7 +363,7 @@ h1{
   border-radius: 10px;
   max-width: 400px;
   height: auto;
-  margin: 10px;
+  margin-bottom: 20px;
   padding: 20px;
 }
 
@@ -369,9 +372,9 @@ h1{
   margin-right: 20px;
 }
 
-.left{
+.right{
   float: right;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .para {
@@ -386,10 +389,9 @@ h1{
   border-radius: 10px;
   max-width: 400px;
   height: auto;
-  max-height: 640px;
-  margin: 10px;
+  margin: 0px;
   padding: 20px;
-float: none;
+  float: none;
 }
 
 #scrabble {
@@ -406,6 +408,7 @@ float: none;
 @media screen and (min-width: 700px) {
   .card {
     float: right;
+    margin-left: 20px;
   }
   .flip {
     flex-direction: row;
@@ -421,6 +424,7 @@ float: none;
     .bio {
         left: 0%;
         transform: translateX(0%);
+        margin: 20px;
     }
 }
 
@@ -451,7 +455,6 @@ float: none;
     font-family: sans-serif;
     font-weight: 100;
     color: black;
-    width: 95%;
 }
 
 .bold { 
@@ -472,6 +475,7 @@ float: none;
     transform: translateY(-50%);
 }
 .m10 { margin: 10px; }
+.ml20 { margin-left: 20px;}
 .m20 { margin: 20px; }
 .p20 { padding: 20px; }
 .m20-tb { margin: 20px 0px; }
